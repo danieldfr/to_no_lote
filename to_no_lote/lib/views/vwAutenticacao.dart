@@ -47,7 +47,8 @@ class _vwAutenticacaoState extends State<vwAutenticacao> {
                 controller: _controllerCPF,
               ),
               TextField(
-                keyboardType: TextInputType.number,
+                keyboardType: TextInputType.text,
+                obscureText: true,
                 decoration: InputDecoration(
                     labelText: "Senha",
                     icon: Icon(
