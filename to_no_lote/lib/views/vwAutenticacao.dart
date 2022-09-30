@@ -35,7 +35,11 @@ class _vwAutenticacaoState extends State<vwAutenticacao> {
               TextField(
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
-                    labelText: "CPF"
+                    labelText: "CPF",
+                    icon: Icon(
+                      Icons.person,
+                      color: Color(0xFF01813C)
+                    )
                 ),
                 style: TextStyle(
                     fontSize: 20
@@ -45,7 +49,11 @@ class _vwAutenticacaoState extends State<vwAutenticacao> {
               TextField(
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
-                    labelText: "Senha"
+                    labelText: "Senha",
+                    icon: Icon(
+                      Icons.lock,
+                      color: Color(0xFF01813C)
+                    )
                 ),
                 style: TextStyle(
                     fontSize: 20
@@ -71,7 +79,7 @@ class _vwAutenticacaoState extends State<vwAutenticacao> {
               Padding(
                 padding: EdgeInsets.only(top: 10),
                 child: RaisedButton(
-                  color: Colors.green,
+                  //color: Colors.green,
                   textColor: Colors.white,
                   child: Text(
                     "Entrar",
