@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_no_lote/views/vwCadastrarUsuario.dart';
 
 class vwAutenticacao extends StatefulWidget {
   const vwAutenticacao({Key? key}) : super(key: key);
@@ -94,7 +95,14 @@ class _vwAutenticacaoState extends State<vwAutenticacao> {
               Padding(
                 padding: EdgeInsets.only(top: 20),
                 child: GestureDetector(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => vwCadastrarUsuario(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Cadastrar usuário.",
                     textAlign: TextAlign.center,
