@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_no_lote/views/vwCadastrarLote.dart';
 import 'package:to_no_lote/views/vwCadastrarUsuario.dart';
 
 class vwAutenticacao extends StatefulWidget {
@@ -99,7 +100,7 @@ class _vwAutenticacaoState extends State<vwAutenticacao> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => vwCadastrarUsuario(),
+                        builder: (context) => vwCadastrarLote(),
                       ),
                     );
                   },
