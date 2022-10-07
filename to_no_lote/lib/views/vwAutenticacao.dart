@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:to_no_lote/views/vwCadastrarLote.dart';
 import 'package:to_no_lote/views/vwCadastrarUsuario.dart';
+import 'package:to_no_lote/views/vwMapa.dart';
 
 class vwAutenticacao extends StatefulWidget {
   const vwAutenticacao({Key? key}) : super(key: key);
@@ -90,7 +90,14 @@ class _vwAutenticacaoState extends State<vwAutenticacao> {
                       fontSize: 20,
                     ),
                   ),
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => vwMapa(),
+                      ),
+                    );
+                  },
                 ),
               ),
               Padding(
@@ -100,7 +107,7 @@ class _vwAutenticacaoState extends State<vwAutenticacao> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => vwCadastrarLote(),
+                        builder: (context) => vwCadastrarUsuario(),
                       ),
                     );
                   },
