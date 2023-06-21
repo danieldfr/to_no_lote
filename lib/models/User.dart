@@ -65,6 +65,18 @@ class User {
     };
   }
 
+  Map<String, dynamic> toJsonLocalStorage() {
+    return {
+      "token": _token,
+      "name": _name,
+      "nif": _nif,
+      "phone": _phone,
+      "email": _email,
+      "birthdate": _birthdate,
+      "id": _id
+    };
+  }
+
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
       json['data']['token'],
@@ -74,6 +86,20 @@ class User {
       json['data']['user']['phone'],
       json['data']['user']['email'],
       json['data']['user']['birthdate'],
+      "",
+    );
+  }
+
+  factory User.fromLocalStorage(Map<String, dynamic> json) {
+    print('aquii');
+    return User(
+      json['token'],
+      json['id'],
+      json['name'],
+      json['nif'],
+      json['phone'],
+      json['email'],
+      json['birthdate'],
       "",
     );
   }

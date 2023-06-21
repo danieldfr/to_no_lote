@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'package:to_no_lote/models/User.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'dart:convert';
@@ -17,7 +19,7 @@ class AuthModel extends Model {
       String? _saved = _prefs.getString("user_data");
 
       try {
-        _savedUser = User.fromJson(json.decode(_saved!));
+        _savedUser = User.fromLocalStorage(json.decode(_saved!));
         if (_savedUser != null) {
           isLoggedIn = true;
           _user = _savedUser;
@@ -52,7 +54,7 @@ class AuthModel extends Model {
       isLoggedIn = true;
 
       await SharedPreferences.getInstance().then((prefs) {
-        var _save = json.encode(_user!.toJson());
+        var _save = json.encode(_user!.toJsonLocalStorage());
         prefs.setString("user_data", _save);
         prefs.setString("token", _user!.token);
       });

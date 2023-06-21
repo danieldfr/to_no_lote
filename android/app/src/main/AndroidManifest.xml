@@ -29,5 +29,15 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data android:name="com.here.sdk.access_key_id" android:value="n9uoNKHZAMaPmsXsd0C3_Q"/>
+        <meta-data android:name="com.here.sdk.access_key_secret" android:value="wfN3os0GD5py7MFO6A7S2gVCZAtjaN5cLG0hV_zPSyqO7TupniMkPiHNQTm0VG97CdvAu5XrCxdXd-Atb4B7Eg"/>
     </application>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />    
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 </manifest>

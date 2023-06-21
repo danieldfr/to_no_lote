@@ -5,7 +5,7 @@ import 'package:to_no_lote/models/User.dart';
 Future createUser(User user) async {
   http.Response response;
   response = await http.post(
-      Uri.parse("http://192.168.0.105:8000/api/v1/auth/users"),
+      Uri.parse("http://192.168.0.112:8080/api/v1/auth/users"),
       body: json.encode(user.toJson()),
       headers: {
         'Content-type': 'application/json',
